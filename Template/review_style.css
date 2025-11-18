@@ -1,0 +1,237 @@
+/* Үндсэн загвар */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2980b9;
+    --accent-color: #e74c3c;
+    --text-color: #333;
+    --light-bg: #f9f9f9;
+    --border-color: #ddd;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+  
+  .heading {
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    padding-bottom: 1rem;
+  }
+  
+  .heading span {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .heading::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 3px;
+    background: var(--primary-color);
+  }
+  
+  /* Сэтгэгдэл нэмэх форм */
+  .review-form-container {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .review-form-container h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+  }
+  
+  .review-form {
+    display: grid;
+    grid-gap: 1.5rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1.2rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+    font-size: 1rem;
+  }
+  
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background: var(--light-bg);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus,
+  .form-group select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+    outline: none;
+  }
+  
+  .form-group textarea {
+    height: 120px;
+    resize: vertical;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 100%;
+  }
+  
+  .btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Алдааны мессеж */
+  .success-message,
+  .error-message {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .success-message {
+    background-color: rgba(46, 204, 113, 0.2);
+    border: 1px solid #2ecc71;
+    color: #27ae60;
+  }
+  
+  .error-message {
+    background-color: rgba(231, 76, 60, 0.2);
+    border: 1px solid #e74c3c;
+    color: #c0392b;
+  }
+  
+  /* Файл оруулах талбар */
+  .form-group input[type="file"] {
+    padding: 10px;
+    background: #fff;
+    border: 2px dashed var(--border-color);
+  }
+  
+  .form-group input[type="file"]::-webkit-file-upload-button {
+    background: var(--primary-color);
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .form-group input[type="file"]::-webkit-file-upload-button:hover {
+    background: var(--secondary-color);
+  }
+  
+  /* Одны үнэлгээний талбар */
+  #rating {
+    cursor: pointer;
+    padding: 12px;
+  }
+  
+  /* Сэтгэгдлүүдийн хэсэг */
+  .reviews {
+    padding: 2rem 0;
+  }
+  
+  .swiper-slide.box {
+    background: #fff;
+    text-align: center;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .swiper-slide.box:hover {
+    transform: translateY(-10px);
+  }
+  
+  .swiper-slide.box img {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 1rem;
+    border: 5px solid var(--light-bg);
+  }
+  
+  .swiper-slide.box h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+  }
+  
+  .swiper-slide.box p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 1rem;
+  }
+  
+  .stars {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    color: #f39c12;
+  }
+  
+  /* Респонсив дизайн */
+  @media (max-width: 768px) {
+    .review-form-container {
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      width: 90%;
+    }
+    
+    .heading {
+      font-size: 2rem;
+    }
+    
+    .swiper-slide.box {
+      padding: 1.5rem;
+    }
+  }
+
+  
