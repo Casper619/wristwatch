@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root{
+    --green:#4169E1;
+    --dark-color:#022692;
+    --black:#444;
+    --light-color:#666;
+    --border:.1rem solid rgba(0,0,0,.1);
+    --border-hover:.1rem solid var(--black);
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+*{
+    font-family: 'Tahoma', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    
+    transition: all .2s linear;
+    transition: width none;
+}
+
+/* Product Display  */
+
+#cart{
+    font-size:2rem;
+    overflow-x: auto;
+}
+
+body{
+    height: 100rem;
+}
+
+#cart table{
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    white-space: nowrap;
+}
+
+#cart table img{
+    height: 15rem;
+}
+
+#cart table td:nth-child(1){
+    width: 10rem;
+    text-align: center;
+}
+
+#cart table td:nth-child(2){
+    width: 50rem;
+    text-align: center;
+}
+
+#cart table td:nth-child(3){
+    width: 25rem;
+    text-align: center;
+}
+
+#cart table td:nth-child(4),
+#cart table td:nth-child(5),
+#cart table td:nth-child(6){
+    width: 15rem;
+    text-align: center;
+}
+
+#cart table td:nth-child(5) input{
+    width:70px;
+    padding: 10px 5px 10px 15px;
+    border: var(--border);
+    font-size: 1.5rem;
+}
+
+#cart table td:nth-child(5) input:hover{
+    border: var(--border-hover);
+}
+
+#cart table thead{
+    border: 1px solid #e2e9e1;
+    border-left: none;
+    border-right: none;
+}
+
+#cart table thead td{
+    font-weight: 700;
+    
+    padding: 18px 0;
+}
+
+#cart table tbody tr td{
+    padding-top: 15px;
+    font-size:1.5rem;
+}
+
+/* !Product Display  */
+
+
+/* Coupon & Subtotal Display  */
+
+#cart-add{
+    font-size:2rem;
+}
+
+
+#cart-add{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#cart-add #coupon{
+    width: 50%;
+    margin-bottom: 30px;
+}
+
+#cart-add #coupon h3,
+#cart-add #subtotal h3{
+    padding-bottom: 15px;
+}
+
+#cart-add #coupon input{
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    outline: none;
+    width: 60%;
+    margin-right: 10px;
+    border: var(--border-hover);
+}
+
+#cart-add #coupon button,
+#cart-add #subtotal button{
+    background-color: var(--green);
+    color: #fff;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: .5rem;
+}
+
+#cart-add #coupon button:hover,
+#cart-add #subtotal button:hover{
+    background: var(--dark-color);
+}
+
+#cart-add #subtotal{
+    width: 50%;
+    margin-bottom: 30px;
+    border: var(--border-hover);
+    padding: 30px;
+}
+
+#cart-add #subtotal table{
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#cart-add #subtotal table td{
+    width: 50%;
+    border: var(--border-hover);
+    padding: 10px;
+    font-size: 15px;
+}
+
+/* !Coupon & Subtotal Display  */
+
+/* Media query for screens with width 450px or less */
+@media only screen and (max-width: 450px) {
+
+    #cart-add {
+        flex-direction: column;
+    }
+
+    #cart-add #coupon,
+    #cart-add #subtotal {
+        width: 100%;
+    }
+
+    #cart-add #coupon input {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+/* Header Search Form */
+
+.header .header-1 .search-form{
+    width:40rem;
+    height:5rem;
+    border: var(--border);
+    overflow: hidden;
+    background:#fff;
+    display: flex;
+    align-items: center;
+    border-radius: .5rem;
+}
+
+.header .header-1 .search-form input{
+    font-size: 1.2rem;
+    padding: 0 1.2rem;
+    height: 100%;
+    width: 100%;
+    text-transform: none;
+    color: var(--black);
+}
+
+.header .header-1 .search-form label{
+    font-size: 2.5rem;
+    padding-right: 1.5rem;
+    color:var(--black);
+    cursor: pointer;
+}
+
+.header .header-1 .search-form label:hover{
+    color: var(--green);
+}
+
+
+/* Footer Section */
+
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(25rem ,1fr));
+    gap: 1.5rem;
+}
+
+.footer .box-container .box h3{
+    font-size: 2.2rem;
+    color: var(--black);
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a{
+    display: block;
+    font-size: 1.4rem;
+    color: var(--light-color);
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a i{
+    color: var(--green);
+    padding-right: .5rem;
+}
+
+.footer .box-container .box a:hover i{
+    padding-right: 2rem;
+}
+
+.footer .box-container .box .map{
+    width: 100%;
+}
+
+.footer .share{
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.footer .share a{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    background: var(--red);
+    margin: 0 .3rem;
+    border-radius: 50%;
+}
+
+.footer .share a:hover{
+    background: var(--green );
+}
+
+.footer .credit{
+    border-top: var(--border);
+    margin-top: 2rem;
+    padding: 0 1rem;
+    padding-top: 2.5rem;
+    font-size: 1.5rem;
+    color: var(--light-color);
+    text-align: center;
+}
+
+.footer .credit span{
+    color: var(--green);
+}
+
+/* !Footer Section */
+
+/* Header Navbar */
+
+.header .header-2 .navbar {
+    text-align: center;
+ }
+ 
+ .header .header-2 .navbar a{
+     color: #fff;
+     display: inline-block;
+     padding: 1.6rem;
+     font-size: 1.7rem;
+ }
+ 
+ .header .header-2 .navbar a:hover{
+     background: var(--dark-color);
+ }
+ 
+ .header .header-2.active{
+     position: fixed;
+     top: 0; 
+     left: 0; 
+     right: 0;
+     z-index: 1000;
+ 
+ }

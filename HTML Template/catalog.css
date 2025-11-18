@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root{
+    --green:#4169E1;
+    --dark-color:#022692;
+    --black:#444;
+    --light-color:#666;
+    --border:.1rem solid rgba(0,0,0,.1);
+    --border-hover:.1rem solid var(--black);
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+*{
+    font-family: 'Tahoma', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+
+    transition: all .2s linear;
+    transition: width none;
+}
+
+body{
+    height: 100rem;
+}
+
+/* Catalog Section */
+
+
+.grid {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; /* Center items horizontally */
+    gap: 2rem; /* Adjust the gap between items */
+}
+
+.grid .box {
+    display: flex; /* Change display to flex */
+    flex-direction: column; /* Arrange children vertically */
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border: var(--border);
+    width: calc(33.33% - 2rem); /* Adjust width to fit three items per row */
+    max-width: 300px; /* Set maximum width for better responsiveness */
+}
+
+.grid .box:hover {
+    border: var(--border-hover);
+}
+
+.grid .box .image img {
+    max-width: 100%; /* Ensure image doesn't overflow its container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.grid .box .content h3 {
+    font-size: 1.5rem;
+    color: var(--black);
+}
+
+.grid .box .content .price {
+    font-size: 1.2rem;
+    color: var(--black);
+    padding-bottom: .5rem;
+}
+
+.grid .box .content .price span {
+    font-size: 1rem;
+    color: var(--light-color);
+    text-decoration: line-through;
+}
+
+.grid .box .content .stars i {
+    font-size: 1rem;
+    color: var(--green);
+}
+
+
+/* !Catalog Section */
+
+/* Footer Section */
+
+.footer .boxes-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(25rem ,1fr));
+    gap: 1.5rem;
+}
+
+.footer .boxes-container .boxes h3{
+    font-size: 2.2rem;
+    color: var(--black);
+    padding: 1rem 0;
+}
+
+.footer .boxes-container .boxes a{
+    display: block;
+    font-size: 1.4rem;
+    color: var(--light-color);
+    padding: 1rem 0;
+}
+
+.footer .boxes-container .boxes a i{
+    color: var(--green);
+    padding-right: .5rem;
+}
+
+.footer .boxes-container .boxes a:hover i{
+    padding-right: 2rem;
+}
+
+.footer .boxes-container .boxes .map{
+    width: 100%;
+}
+
+.footer .share{
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.footer .share a{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    background: var(--green);
+    margin: 0 .3rem;
+    border-radius: 50%;
+}
+
+.footer .share a:hover{
+    background: var(--black);
+}
+
+.footer .credit{
+    border-top: var(--border);
+    margin-top: 2rem;
+    padding: 0 1rem;
+    padding-top: 2.5rem;
+    font-size: 2rem;
+    color: var(--light-color);
+    text-align: center;
+}
+
+.footer .credit span{
+    color: var(--green);
+}
+
+/* !Footer Section */
+
+
+/* Media query for 450px */
+@media screen and (max-width: 450px) {
+    .grid .box {
+        width: calc(50% - 1rem); /* Two items per row */
+    }
+}
+
+/* Media query for 768px */
+@media screen and (max-width: 768px) {
+    .grid .box {
+        width: calc(33.33% - 1rem); /* Three items per row */
+    }
+}
+
+/* Footer Section */
+
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(25rem ,1fr));
+    gap: 1.5rem;
+}
+
+.footer .box-container .box h3{
+    font-size: 2.2rem;
+    color: var(--black);
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a{
+    display: block;
+    font-size: 1.4rem;
+    color: var(--light-color);
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a i{
+    color: var(--green);
+    padding-right: .5rem;
+}
+
+.footer .box-container .box a:hover i{
+    padding-right: 2rem;
+}
+
+.footer .box-container .box .map{
+    width: 100%;
+}
+
+.footer .share{
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.footer .share a{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    background: var(--red);
+    margin: 0 .3rem;
+    border-radius: 50%;
+}
+
+.footer .share a:hover{
+    background: var(--green );
+}
+
+.footer .credit{
+    border-top: var(--border);
+    margin-top: 2rem;
+    padding: 0 1rem;
+    padding-top: 2.5rem;
+    font-size: 1.5rem;
+    color: var(--light-color);
+    text-align: center;
+}
+
+.footer .credit span{
+    color: var(--green);
+}
+
+/* !Footer Section */
